@@ -1,0 +1,318 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+}
+h1, h2{
+  font-family: 'Gamja Flower', cursive;
+  font-size: 1.7em;
+}
+/*Navbar Fixed Top*/
+header{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  border: 1px solid black;
+  width: 100%;
+  background-color: #EF4423;
+  height: 77px;
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  font-family: 'Gamja Flower', cursive;
+  padding-right: 35px;
+  padding-top: 18px;
+}
+
+nav a{
+  text-decoration: none;
+  padding: 0 10px;
+  color: black;
+  text-transform: uppercase;
+}
+nav a:hover {
+  color: white;
+}
+#logoJudo{
+  margin-left:2%;
+}
+/* The hero image */
+/* les têtes sont coupées, il faut revoir la taille de la photo */
+.hero-image {
+/* for a darken background effect to make the text easier to read */
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("judo_banner.jpg");
+
+/* Set a specific height */
+height: 85%;
+
+/* to position and center the image to scale on all screens but does it really work???*/
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+
+}
+
+/* text in the middle of the image */
+.hero-text {
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+font-family: 'Gamja Flower', cursive;
+font-size: 4rem;
+display: flex;
+flex-direction: column;
+}
+p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+  position: absolute;
+  top: 60%;  
+}
+
+
+/* Actualités */
+.rectangle_rouge{
+  width: 100%;
+  height: 70px;
+  background: #EE4423;
+  position: relative;
+
+}
+h2{
+  position: absolute;
+  margin-left: 45%;
+  margin-top: 10px;
+  padding: 10px;
+  font-family:'Gamja Flower', cursive;
+  font-size: 1.7em;
+  color: white;
+}
+/* The Slideshow */
+
+.slideshow{
+  overflow: hidden;
+  
+}
+.slideshow figure{
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slideshow infinite;
+}
+/* faut trouver une solution pour que les photos soient toutes de la même taille!! */
+.slideshow figure img{
+  float: left;
+  
+
+}
+@keyframes slideshow{
+  0%{
+    left: 0;
+  }
+  18%{
+      left: 0;
+    }
+  32%{
+    left: -100%
+  }
+  50%{
+    left: -100%
+  }
+  64%{
+    left: -200%
+  }
+  82%{
+    left: -200%
+  }
+  96%{
+    left:-300%
+  }
+  100%{
+    left: -300%
+  }
+}
+/*photos a la place du slide*/
+.photo_noslide{
+  display: none;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0%;
+  border: 1px solid black;
+  width: 100%;
+  background-color: #EF4423;
+ overflow: hidden;
+ height: 70px;
+}
+footer h2{
+  margin-left: 5%;
+  padding-right: 1%;
+  color: black;
+}
+.logoDescodeuses{
+  position: relative;
+  top: 20px;
+  left: 400%;
+} 
+.left_contacts{
+  position: relative;
+  top: -25%;
+  left: 40%;
+}
+.left{
+  display: flex;
+  width: 40%;
+}
+.right{
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+/*************MEDIA QUERIES****************/
+
+/**************DESKTOP***********************/
+@media screen and (max-width: 1200px){
+  .slideshow {
+    display: none;
+    }
+    .photo_noslide{
+    display: flex;
+    width: 50%;
+    
+    }
+   .hero-image{
+    height: 45%;
+  }
+   .logoDescodeuses{
+    left: 335%;
+  }
+   .left_contacts{
+    left: 55%
+  }
+   .hero-text{
+    font-size: 3.5rem;
+  }
+   h2{
+    margin-left: 100%;
+  }
+    }
+
+
+/**************SMALLSCREENS******************/
+@media screen and (max-width: 827px){
+
+  .slideshow {
+    display: none;
+    }
+    .photo_noslide{
+    display: flex;
+    width: 50%;
+    
+    }
+   .hero-image{
+    height:50%;
+  }
+   .logoDescodeuses{
+    left: 300%;
+  }
+   .left_contacts{
+    left: 69%
+  }
+   .hero-text{
+    font-size: 3.5rem;
+  }
+   h2{
+    margin-left: 35%;
+  }
+    }
+
+
+/************IPAD TABLET****************/
+@media screen and (max-width: 632px){
+
+  .slideshow {
+  display: none;
+  }
+  .photo_noslide{
+  display: flex;
+  width: 50%;
+  
+  }
+ .hero-image{
+  height:50%;
+}
+ .logoDescodeuses{
+  left: 230%;
+}
+ .left_contacts{
+  left: 73%
+}
+ .hero-text{
+  font-size: 3rem;
+}
+ h2{
+  margin-left: 35%;
+}
+.right h2{
+  left: 53%;
+}
+  }
+
+  /*********MOBILE*************/
+  
+  @media (max-device-width:352px){
+
+    .slideshow {
+    display: none;
+    }
+    .photo_noslide{
+      display: block;
+      
+    }
+    .hero-image{
+      height:50%;
+    }
+    .logoDescodeuses{
+      left: 100%;
+    }
+    .left_contacts{
+      left: 19%
+    }
+    .hero-text{
+      font-size: 1.7rem;
+    }
+    h2{
+      margin-left: 20%;
+    }
+   footer h2{
+      display: none;
+}
+nav ul{
+  display: flex;
+ flex-wrap: wrap;
+ font-size: small;
+ padding:10px;
+}
+
+.hero-text p{
+  font-size: 1rem;
+}
+
+    }
+    
